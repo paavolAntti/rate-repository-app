@@ -1,10 +1,12 @@
 import React from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
 import RepositoryItem from './RepositoryItem';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
   separator: {
     height: 10,
+    backgroundColor: theme.colors.accent
   },
 });
 
@@ -72,6 +74,7 @@ const RepositoryList = () => {
           forksCount={item.forksCount}
           ratingAverage={item.ratingAverage}
           reviewCount={item.reviewCount}
+          stars={item.stargazersCount}
         />
       )} 
     />
